@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark &amp; Pout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto:wght@400&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-line"></div>
+    <div class="container">
+        <div class="header">
+        <div class="header-top">
+            <div class="border-top"></div>
+            <div class="border-top"></div>
+        </div>
+        <div class="header-bottom">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="media/logo.png" alt="Spark & Pout Logo" class="logo-img">
+                    <h1 class="logo-text">SPARK & POUT</h1>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="menu.html" class="nav-link">MENU</a>
+                    <a href="order.html" class="nav-link">ORDER</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="help.html" class="nav-link">HELP</a>
+                </nav>
+                <div class="hamburger-menu">
+                    <div class="hamburger-menu-toggle" onclick="toggleHamburgerMenu()">
+                        &#9776;
+                    </div>
+                    <div class="hamburger-menu-content">
+                        <nav class="nav">
+                            <a href="index.html" class="nav-link">HOME</a>
+                            <a href="menu.html" class="nav-link">MENU</a>
+                            <a href="order.html" class="nav-link">ORDER</a>
+                            <a href="about.html" class="nav-link">ABOUT</a>
+                            <a href="help.html" class="nav-link">HELP</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>                 
+            </div>                
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+
+    <div class="content">
+        <p>
+            At Spark &amp; Pout, we believe that makeup is more than just color—it's a form of self-expression, a way to shine, and a celebration of individuality. We are so thankful to have you as part of our vibrant community, where every face gets to sparkle, and every pout gets to pop! Our mission is to provide you with bold, playful, and high-quality products that ignite your creativity and boost your confidence. Thank you for trusting us to add that extra sparkle to your world!
+        </p>
+        <div class="images">
+            <img alt="Close-up of two faces with makeup" height="150" src="media/aboutimg.jpg" width="300"/>
+            <div class="quote">
+                “Makeup is not a mask that covers up your beauty; it’s a weapon that helps you express who you are from the inside.”<br/>
+                - Michelle Phan
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="https://www.facebook.com/christructure" target="_blank" class="social">
+                <i class="fab fa-facebook"></i>
+                <p>Spark and Pout</p>
+            </a>
+            <a href="https://www.instagram.com/christructure" target="_blank" class="social">
+                <i class="fab fa-instagram"></i>
+                <p>sparknpout.co</p>
+            </a>                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+        <div class="cart-actions">
+            <button id="checkout-btn" onclick="checkout()">Check Out</button>
+            <button id="reset-btn" onclick="resetCart()">Reset</button>
+        </div>
+    </div>
+</div>
+</html>

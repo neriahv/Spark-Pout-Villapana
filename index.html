@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark & Pout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="pink-line"></div>
+    <div class="container">
+        <div class="header">
+        <div class="header-top">
+            <div class="border-top"></div>
+            <div class="border-top"></div>
+        </div>
+        <div class="header-bottom">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="media/logo.png" alt="Spark & Pout Logo" class="logo-img">
+                    <h1 class="logo-text" clas="title">SPARK & POUT</h1>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="menu.html" class="nav-link">MENU</a>
+                    <a href="order.html" class="nav-link">ORDER</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="help.html" class="nav-link">HELP</a>
+                </nav>
+                <div class="hamburger-menu" class="icons">
+                    <div class="hamburger-menu-toggle" onclick="toggleHamburgerMenu()">
+                        &#9776;
+                    </div>
+                    <div class="hamburger-menu-content">
+                        <nav class="nav">
+                            <a href="index.html" class="nav-link">HOME</a>
+                            <a href="menu.html" class="nav-link">MENU</a>
+                            <a href="order.html" class="nav-link">ORDER</a>
+                            <a href="about.html" class="nav-link">ABOUT</a>
+                            <a href="help.html" class="nav-link">HELP</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="cart-icon" class="icons">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>                 
+            </div>                
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+        <div class="subtitle">
+            <div class="subtitle-text">
+                <span class="extra-txt">Vol. 123 - No. 19</span>
+                <span>Where every face shines and every pout pops!</span>
+                <span class="extra-txt">Make up Brand</span>
+            </div>
+        </div>
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="media/cover.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="https://www.facebook.com/christructure" target="_blank" class="social">
+                <i class="fab fa-facebook"></i>
+                <p>Spark and Pout</p>
+            </a>
+            <a href="https://www.instagram.com/christructure" target="_blank" class="social">
+                <i class="fab fa-instagram"></i>
+                <p>sparknpout.co</p>
+            </a>                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button id="checkout-btn" onclick="checkout()">Check Out</button>
+                <button id="reset-btn" onclick="resetCart()">Reset</button>
+            </div>
+        </div>
+    </div>
+</html>

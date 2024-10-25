@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK & POUT</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-line"></div>
+    <div class="container">
+        <div class="header">
+        <div class="header-top">
+            <div class="border-top"></div>
+            <div class="border-top"></div>
+        </div>
+        <div class="header-bottom">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="media/logo.png" alt="Spark & Pout Logo" class="logo-img">
+                    <h1 class="logo-text">SPARK & POUT</h1>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="menu.html" class="nav-link">MENU</a>
+                    <a href="order.html" class="nav-link">ORDER</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="help.html" class="nav-link">HELP</a>
+                </nav>
+                <div class="hamburger-menu">
+                    <div class="hamburger-menu-toggle" onclick="toggleHamburgerMenu()">
+                        &#9776;
+                    </div>
+                    <div class="hamburger-menu-content">
+                        <nav class="nav">
+                            <a href="index.html" class="nav-link">HOME</a>
+                            <a href="menu.html" class="nav-link">MENU</a>
+                            <a href="order.html" class="nav-link">ORDER</a>
+                            <a href="about.html" class="nav-link">ABOUT</a>
+                            <a href="help.html" class="nav-link">HELP</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>                 
+            </div>                
+        </div>
+        <div class="border-bottom"></div>
+    </div>
+        
+    <div class="title-content" style="text-align: center;">Find your SHADE MATCH</div>
+    <table class="shade-table">
+        <tr>
+            <th>Foundation</th>
+            <th>Contour</th>
+            <th>Concealer</th>
+            <th>Blush</th>
+        </tr>
+        <tr>
+            <td class="shade" style="background-color: #fde8d8;"></td>
+            <td class="shade" style="background-color: #d2a17e;" rowspan="2"></td>
+            <td class="shade" style="background-color: #eac4a3;" rowspan="3"></td>
+            <td class="shade" style="background-color: #e88b8b;" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="shade" style="background-color: #fcdcb8;"></td>
+        </tr>
+        <tr>
+            <td class="shade" style="background-color: #fbcf98;"></td>
+            <td class="shade" style="background-color: #c18b6a;" rowspan="2"></td>
+            <td class="shade" style="background-color: #e06b6b;" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="shade" style="background-color: #f9c278;"></td>
+            <td class="shade" style="background-color: #e0a97d;" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="shade" style="background-color: #f7b558;"></td>
+            <td class="shade" style="background-color: #b07556;"></td>
+            <td class="shade" style="background-color: #d84b4b;"></td>
+        </tr>
+    </table>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="https://www.facebook.com/christructure" target="_blank" class="social">
+                <i class="fab fa-facebook"></i>
+                <p>Spark and Pout</p>
+            </a>
+            <a href="https://www.instagram.com/christructure" target="_blank" class="social">
+                <i class="fab fa-instagram"></i>
+                <p>sparknpout.co</p>
+            </a>                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+        <div class="cart-actions">
+            <button id="checkout-btn" onclick="checkout()">Check Out</button>
+            <button id="reset-btn" onclick="resetCart()">Reset</button>
+        </div>
+    </div>
+</div>
+</html>

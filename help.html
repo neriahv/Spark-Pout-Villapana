@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spark &amp; Pout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <div class="pink-line"></div>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div class="border-top"></div>
+                <div class="border-top"></div>
+            </div>
+            <div class="header-bottom">
+                <div class="logo-nav">
+                    <div class="logo">
+                        <img src="media/logo.png" alt="Spark & Pout Logo" class="logo-img">
+                        <h1 class="logo-text">SPARK & POUT</h1>
+                    </div>
+                    <nav class="navbar">
+                        <a href="index.html" class="nav-link">HOME</a>
+                        <a href="menu.html" class="nav-link">MENU</a>
+                        <a href="order.html" class="nav-link">ORDER</a>
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                        <a href="help.html" class="nav-link">HELP</a>
+                    </nav>
+                    <div class="hamburger-menu">
+                        <div class="hamburger-menu-toggle" onclick="toggleHamburgerMenu()">
+                            &#9776;
+                        </div>
+                        <div class="hamburger-menu-content">
+                            <nav class="nav">
+                                <a href="index.html" class="nav-link">HOME</a>
+                                <a href="menu.html" class="nav-link">MENU</a>
+                                <a href="order.html" class="nav-link">ORDER</a>
+                                <a href="about.html" class="nav-link">ABOUT</a>
+                                <a href="help.html" class="nav-link">HELP</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </div>                 
+                </div>                
+            </div>
+            <div class="border-bottom"></div>
+        </div>
+        
+        <form class="content">
+            <h2 class="title-content">How can we help you?</h2>
+            <textarea placeholder="Type your concerns, problems, issues, or suggestions in here......"></textarea>
+            <button id="submit-btn">Submit</button>
+        </form>
+        
+        <div class="footerH">
+            <div class="left">
+                <img alt="Spark &amp; Pout logo" src="media/logo.png"/>
+                <p> <a href="tel:+100210">Contact Information: 09xxxxxxx</a></p>
+                <p>Company Name: Spark &amp; Pout.co</p>
+                <p>© 2024, Copyrights Reserved</p>
+            </div>
+            <div class="right">
+                <p>Do not forget to order and shop with us :)</p>
+                <p>Remember: this is where every face shines and every pout pops!</p>
+                <a href="https://www.facebook.com/christructure" target="_blank" class="social">
+                    <i class="fab fa-facebook"></i>
+                    <p>Spark and Pout</p>
+                </a>
+                <a href="https://www.instagram.com/christructure" target="_blank" class="social">
+                    <i class="fab fa-instagram"></i>
+                    <p>sparknpout.co</p>
+                </a>                
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+        <div class="cart-actions">
+            <button id="checkout-btn" onclick="checkout()">Check Out</button>
+            <button id="reset-btn" onclick="resetCart()">Reset</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

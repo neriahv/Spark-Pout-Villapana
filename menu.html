@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Spark & Pout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="pink-line"></div>
+  <div class="container">
+      <div class="header">
+      <div class="header-top">
+          <div class="border-top"></div>
+          <div class="border-top"></div>
+      </div>
+      <div class="header-bottom">
+          <div class="logo-nav">
+              <div class="logo">
+                  <img src="media/logo.png" alt="Spark & Pout Logo" class="logo-img">
+                  <h1 class="logo-text">SPARK & POUT</h1>
+              </div>
+              <nav class="navbar">
+                  <a href="index.html" class="nav-link">HOME</a>
+                  <a href="menu.html" class="nav-link">MENU</a>
+                  <a href="order.html" class="nav-link">ORDER</a>
+                  <a href="about.html" class="nav-link">ABOUT</a>
+                  <a href="help.html" class="nav-link">HELP</a>
+              </nav>
+              <div class="hamburger-menu">
+                  <div class="hamburger-menu-toggle" onclick="toggleHamburgerMenu()">
+                      &#9776;
+                  </div>
+                  <div class="hamburger-menu-content">
+                      <nav class="nav">
+                          <a href="index.html" class="nav-link">HOME</a>
+                          <a href="menu.html" class="nav-link">MENU</a>
+                          <a href="order.html" class="nav-link">ORDER</a>
+                          <a href="about.html" class="nav-link">ABOUT</a>
+                          <a href="help.html" class="nav-link">HELP</a>
+                      </nav>
+                  </div>
+              </div>
+              <div class="cart-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-count" class="cart-count">0</span>
+              </div>                 
+          </div>                
+      </div>
+      <div class="border-bottom"></div>
+  </div>
+
+        <div class="featured-products">
+            <h2 class="title-content">Featured Products</h2>
+            <div class="product-images">
+                <img alt="Lipstick and swatch" height="150" src="media/featured1.jpg" width="150"/>
+                <img alt="Compact powder and brush" height="150" src="media/powder.jpg" width="150"/>
+                <img alt="Compact powder with leaves" height="150" src="media/eyeshadow.jpg" width="150"/>
+                <img alt="Nail polish with leaves" height="150" src="media/featured4.jpg" width="150"/>
+            </div>
+            <div class="shop-button">
+                <button onclick="window.location.href='menuProduct.html'" class="shop-button">Shop All!</button>
+            </div>
+        </div>
+        <div class="promo-section">
+            <div class="promo1">
+                <h3>Want to know your <br> perfect shade match?</h3>
+                <p>Our website got you covered!</p>
+                <button onclick="window.location.href='menuShade.html'">Click Here!</button>
+            </div>
+            <div class="promo2">
+                <button onclick="window.location.href='order.html'">Order Now!</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://www.facebook.com/christructure" target="_blank" class="social">
+                    <i class="fab fa-facebook"></i>
+                    <p>Spark and Pout</p>
+                </a>
+                <a href="https://www.instagram.com/christructure" target="_blank" class="social">
+                    <i class="fab fa-instagram"></i>
+                    <p>sparknpout.co</p>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button id="checkout-btn" onclick="checkout()">Check Out</button>
+                <button id="reset-btn" onclick="resetCart()">Reset</button>
+            </div>
+        </div>
+    </div>
+</html>
